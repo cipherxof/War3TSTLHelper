@@ -1,0 +1,33 @@
+{
+  "name": "war3tstlhelper",
+  "version": "1.0.0",
+  "description": "Automatically generate TypeScript definition files for generated globals in Warcraft III maps using Lua.",
+  "main": "src/war3tstlhelper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "triggerhappy",
+  "license": "MIT",
+  "keywords": [
+    "wc3",
+    "war3",
+    "warcraft",
+    "3",
+    "warcraft",
+    "iii",
+    "jass",
+    "lua",
+    "typescript",
+    "ts",
+    "tstl",
+    "definitions"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/triggerhappy187/War3TSTLHelper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/triggerhappy187/War3TSTLHelper/issues"
+  },
+  "homepage": "https://github.com/triggerhappy187/War3TSTLHelper#readme"
+}
