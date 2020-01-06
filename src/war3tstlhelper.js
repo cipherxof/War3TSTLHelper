@@ -10,26 +10,31 @@ const types = {
 
 class War3TSTLHelper {
 
-    constructor(luaCode){
+    constructor(luaCode) {
         this.contents = luaCode;
     }
 
-    genTSDefinitions(){
-        const lines = this.contents.split('\n');
+    genTSDefinitions() {
+        const lines = this.contents.split("\n");
         const varTypes = {};
-        let output = '';
-        
+        let output = "";
+
         lines.forEach(line => {
-            line = line.replace(/\s+/g, '');
+            line = line.replace(/\s+/g, "");
 
-            if (line.startsWith("gg_")){
-                const parts = line.split('_', 2);
-                
-                if (parts.length >= 2){
-                    const type = types[parts[1]];
-                    const name = (line.indexOf('=') != -1 ? line.split('=')[0] : line);
+            if (line.startsWith("gg_")) {
+                const parts = line.split("_", 2);
 
-                    if (name in varTypes == false){
+                if (parts.length >= 2) {
+                    let type = types[parts[1]];
+                    const name = (line.indexOf("=") != -1 ? line.split("=")[0] : line);
+
+                    // Generated sound variables can be strings as well as sounds
+                    if (type === "sound" && line.indexOf(`"`) !== -1) {
+                        type = "string";
+                    }
+
+                    if (name in varTypes == false) {
                         output += `declare var ${name}: ${type};\n`
 
                         varTypes[name] = type;
