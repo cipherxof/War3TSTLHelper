@@ -1,6 +1,6 @@
 {
   "name": "war3tstlhelper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automatically generate TypeScript definition files for generated globals in Warcraft III maps using Lua.",
   "main": "src/war3tstlhelper.js",
   "scripts": {

@@ -22,7 +22,7 @@ class War3TSTLHelper {
         lines.forEach(line => {
             line = line.replace(/\s+/g, "");
 
-            if (line.startsWith("gg_")) {
+            if (line.startsWith("gg_") || line.startsWith("udg_")) {
                 const parts = line.split("_", 2);
 
                 if (parts.length >= 2) {
